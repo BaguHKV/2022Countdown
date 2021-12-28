@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>A simple clock</title>
+
+</head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+
+setInterval(function(){
+const dateTime = Date.now();
+const timestamp = Math.floor(dateTime / 1000);
+$('#tim').empty();
+$('#tim').append("2022尚餘百分比:")
+
+per = 1640966400-1609430400;
+send = 1640966400 - timestamp;
+cal = send/per
+ans = (1-cal)*100
+if(ans < 100){
+$('#tim').append(ans+"%")
+}
+else{
+$('#tim').append("100%")
+}
+  }, 1);  
+
+});
+
+</script>
+<body translate="no" >
+  <div id="output"></div></br></br></br></br></br>
+<div id="tim"></div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js'></script>
+  <script>
+// https://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript
+var urlParams;
+(function () {
+    var match,
+        pl     = /\+/g,  // Regex for replacing addition symbol with a space
+        search = /([^&=]+)=?([^&]*)/g,
+        decode = function (s) { return decodeURIComponent(s.replace(pl, " ")); },
+        query  = window.location.search.substring(1);
+
+    urlParams = {};
+    while (match = search.exec(query))
+       urlParams[decode(match[1])] = decode(match[2]);
+})();
+
+var output = document.getElementById("output");
+var tim = document.getElementById("tim");
+if (urlParams["style"]) output.setAttribute("style", urlParams["style"]);
+if (urlParams["bodyStyle"]) document.body.setAttribute("style", urlParams["bodyStyle"]);
+
+if (urlParams["style"]) tim.setAttribute("style", urlParams["style"]);
+var c;
+setInterval(
+c = function() {
+    output.innerText = moment().format(urlParams["format"] || '');
+}, 1000);
+c();
+
+  </script>
+</body>
+</html>
