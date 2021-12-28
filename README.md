@@ -11,5 +11,5 @@ see https://momentjs.com/docs/#/displaying/format/
 # Example
 `https://baguhkv.github.io/2022Countdown/?format=YYYY/MM/DD-HH:mm:ss`<br />
 https://baguhkv.github.io/2022Countdown/?format=YYYY/MM/DD-HH:mm:ss <br />
-`https://baguhkv.github.io/2022Countdown/?style=font:bold 30px monospace;color:black;&format=YYYY/MM/DD-HH:mm:ss`
-https://baguhkv.github.io/2022Countdown/?style=font:%20bold%2030px%20monospace;%20color:%20black;&format=YYYY/MM/DD-HH:mm:ss
+`https://baguhkv.github.io/2022Countdown/?style=font:bold 30px monospace;color:black;&format=YYYY/MM/DD-HH:mm:ss`<br />
+https://baguhkv.github.io/2022Countdown/?style=font:%20bold%2030px%20monospace;%20color:%20black;&format=YYYY/MM/DD-HH:mm:ss<br />
