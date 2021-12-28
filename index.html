@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
- 
+
 <head>
   <meta charset="UTF-8">
   <title>A simple clock</title>
@@ -20,6 +20,7 @@ per = 1640966400-1609430400;
 send = 1640966400 - timestamp;
 cal = send/per
 ans = (1-cal)*100
+
 if(ans < 100){
 $('#tim').append(ans+"%")
 }
@@ -28,12 +29,32 @@ $('#tim').append("100%")
 }
   }, 1);  
 
+
+function fadeSwitchElements(id1, id2)
+    {
+        var element1 = $('#' + id1);
+        var element2 = $('#' + id2);
+        
+        if(element1.is(':visible'))
+        {
+            element1.fadeToggle(450);
+            element2.fadeToggle(450);
+        }
+        else
+        {
+             element2.fadeToggle(450, function() {
+                element1.fadeToggle(450);
+            });   
+        }    
+    }
+
+
 });
 
 </script>
 <body translate="no" >
   <div id="output"></div></br></br></br></br></br>
-<div id="tit"></div></br>
+  <div id="tit"></div></br>
 <div id="tim"></div>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js'></script>
   <script>
@@ -59,6 +80,13 @@ if (urlParams["bodyStyle"]) document.body.setAttribute("style", urlParams["bodyS
 
 if (urlParams["style"]) tim.setAttribute("style", urlParams["style"]);
 if (urlParams["style"]) tit.setAttribute("style", urlParams["style"]);
+
+if (urlParams["animation"]=="true"){
+setInterval(function(){
+fadeSwitchElements('tim', 'tim');
+  }, 500);  
+
+};
 var c;
 setInterval(
 c = function() {
@@ -66,6 +94,24 @@ c = function() {
 }, 1000);
 c();
 
+
+function fadeSwitchElements(id1, id2)
+    {
+        var element1 = $('#' + id1);
+        var element2 = $('#' + id2);
+        
+        if(element1.is(':visible'))
+        {
+            element1.fadeToggle(450);
+            element2.fadeToggle(450);
+        }
+        else
+        {
+             element2.fadeToggle(450, function() {
+                element1.fadeToggle(450);
+            });   
+        }    
+    }
   </script>
 </body>
 </html>
