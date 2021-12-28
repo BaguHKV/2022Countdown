@@ -1,5 +1,5 @@
 # 2022Countdown
-A script for OBS Studio to embed a 2022Countdown and show the  date and timestamp. 
+A script for OBS Studio to embed a 2022Countdown and show the  date and timestamp. \n
 Just use Browser Source can input it.
 
 # Parameters
