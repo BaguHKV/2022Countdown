@@ -9,12 +9,12 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
-
+$('#tit').append("2022尚餘百分比:")
 setInterval(function(){
 const dateTime = Date.now();
 const timestamp = Math.floor(dateTime / 1000);
 $('#tim').empty();
-$('#tim').append("2022尚餘百分比:")
+
 
 per = 1640966400-1609430400;
 send = 1640966400 - timestamp;
@@ -33,6 +33,7 @@ $('#tim').append("100%")
 </script>
 <body translate="no" >
   <div id="output"></div></br></br></br></br></br>
+<div id="tit"></div></br>
 <div id="tim"></div>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js'></script>
   <script>
@@ -52,10 +53,12 @@ var urlParams;
 
 var output = document.getElementById("output");
 var tim = document.getElementById("tim");
+var tit = document.getElementById("tit");
 if (urlParams["style"]) output.setAttribute("style", urlParams["style"]);
 if (urlParams["bodyStyle"]) document.body.setAttribute("style", urlParams["bodyStyle"]);
 
 if (urlParams["style"]) tim.setAttribute("style", urlParams["style"]);
+if (urlParams["style"]) tit.setAttribute("style", urlParams["style"]);
 var c;
 setInterval(
 c = function() {
