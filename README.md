@@ -7,6 +7,7 @@ Use `style` to add more style to the output and time percentage element<br />
 Use `bodyStyle` for the style to the body element<br />
 Use `format` to control the date format. For the syntax<br />
 Use `animation` to enable the text animation<br />
+`animation=true`<br />
 see https://momentjs.com/docs/#/displaying/format/
 
 # Example
