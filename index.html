@@ -19,7 +19,7 @@ $('#tim').empty();
 per = 1640966400-1609430400;
 send = 1640966400 - timestamp;
 cal = send/per
-ans = (send/1000000000)+2021
+ans = 1-(send/1000000000)+2021
 
 if(ans < 2022){
 $('#tim').append(ans+"%")
