@@ -13,8 +13,12 @@ Use `animation` to enable the text animation<br />
 
 # Example
 `https://baguhkv.github.io/2022Countdown/?format=YYYY/MM/DD-HH:mm:ss`<br />
-https://baguhkv.github.io/2022Countdown/?format=YYYY/MM/DD-HH:mm:ss <br />
+https://baguhkv.github.io/2022Countdown/?format=YYYY/MM/DD-HH:mm:ss <br /><br />
 `https://baguhkv.github.io/2022Countdown/?style=font:bold 30px monospace;color:black;&format=YYYY/MM/DD-HH:mm:ss`<br />
 https://baguhkv.github.io/2022Countdown/?style=font:%20bold%2030px%20monospace;%20color:%20black;&format=YYYY/MM/DD-HH:mm:ss<br />
+
+`https://baguhkv.github.io/2022Countdown/?style=font:bold 30px monospace;color:black;font-family: Times New Roman, Times, serif;&format=YYYY/MM/DD-HH:mm:ss`<br />
+https://baguhkv.github.io/2022Countdown/?style=font:bold%2030px%20monospace;color:black;font-family:%20Times%20New%20Roman,%20Times,%20serif;&format=YYYY/MM/DD-HH:mm:ss<br />
+
 `https://baguhkv.github.io/2022Countdown/?style=font: bold 57px monospace; color: white; display: inline-block; border-radius: 5px; padding: 2px 5px; background-color: rgba(233, 97, 97, 0.76)&format=YYYY/MM/DD-HH:mm:ss`<br />
 https://baguhkv.github.io/2022Countdown/?style=font:%20bold%2057px%20monospace;%20color:%20white;%20display:%20inline-block;%20border-radius:%205px;%20padding:%202px%205px;%20background-color:%20rgba(233,%2097,%2097,%200.76)&format=YYYY/MM/DD-HH:mm:ss
