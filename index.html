@@ -14,19 +14,34 @@ setInterval(function(){
 const dateTime = Date.now();
 const timestamp = Math.floor(dateTime / 1000);
 $('#tim').empty();
+$('#time').empty();
 
-
-per = 1640966400-1609430400;
-send = 1640966400 - timestamp;
+target = 1640966400;
+per = target-1609430400;
+send = target - timestamp;
 cal = send/per
 ans = 1-(send/1000000000)+2021
 
 if(ans < 2022){
-$('#tim').append(ans+"%")
+$('#tim').append(ans+"")
 }
 else{
-$('#tim').append("2022!!!")
+$('#tim').append("2022!!!Happy New Year~")
 }
+
+
+per1 = target-1609430400;
+send1 = target - timestamp;
+cal1 = send1/per1
+ans1 = (1-cal1)*100
+
+if(ans1 < 100){
+$('#time').append(ans1+"%")
+}
+else{
+$('#time').append("100%")
+}
+
   }, 1);  
  
 
@@ -56,6 +71,8 @@ function fadeSwitchElements(id1, id2)
   <div id="output"></div></br></br></br></br></br>
   <div id="tit"></div></br>
 <div id="tim"></div>
+</br>
+<div id="time"></div>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js'></script>
   <script>
 // https://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript
@@ -74,16 +91,19 @@ var urlParams;
 
 var output = document.getElementById("output");
 var tim = document.getElementById("tim");
+var time = document.getElementById("time");
 var tit = document.getElementById("tit");
 if (urlParams["style"]) output.setAttribute("style", urlParams["style"]);
 if (urlParams["bodyStyle"]) document.body.setAttribute("style", urlParams["bodyStyle"]);
 
 if (urlParams["style"]) tim.setAttribute("style", urlParams["style"]);
 if (urlParams["style"]) tit.setAttribute("style", urlParams["style"]);
+if (urlParams["style"]) time.setAttribute("style", urlParams["style"]);
 
 if (urlParams["animation"]=="true"){
 setInterval(function(){
-fadeSwitchElements('tim', 'tim');
+fadeSwitchElements('tim', 'time');
+fadeSwitchElements('time', 'tim');
   }, 500);  
 
 };
@@ -91,7 +111,7 @@ var c;
 setInterval(
 c = function() {
     output.innerText = moment().format(urlParams["format"] || '');
-}, 1000);
+}, 1);
 c();
 
 
@@ -102,13 +122,13 @@ function fadeSwitchElements(id1, id2)
         
         if(element1.is(':visible'))
         {
-            element1.fadeToggle(450);
-            element2.fadeToggle(450);
+            element1.fadeToggle(390);
+            element2.fadeToggle(390);
         }
         else
         {
-             element2.fadeToggle(450, function() {
-                element1.fadeToggle(450);
+             element2.fadeToggle(390, function() {
+                element1.fadeToggle(390);
             });   
         }    
     }
