@@ -6,9 +6,10 @@ Just use Browser Source can input it.
 Use `style` to add more style to the output and time percentage element<br />
 Use `bodyStyle` for the style to the body element<br />
 Use `format` to control the date format. For the syntax<br />
+see https://momentjs.com/docs/#/displaying/format/<br />
 Use `animation` to enable the text animation<br />
 `animation=true`<br />
-see https://momentjs.com/docs/#/displaying/format/
+
 
 # Example
 `https://baguhkv.github.io/2022Countdown/?format=YYYY/MM/DD-HH:mm:ss`<br />
